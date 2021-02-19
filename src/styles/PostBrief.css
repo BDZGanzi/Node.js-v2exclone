@@ -1,0 +1,23 @@
+.content{
+    width:800px;
+    margin:0;
+    /* background-color: #E2E2E2; */
+}
+
+.container_postBrief {
+    position: relative;
+    width: 700px;
+    height: auto;
+    background-color: #f6f6f6;
+    box-sizing: border-box;
+}
+
+.leftDiv_postBrief{
+    position:absolute;
+    left: 15px;
+    width: auto;
+}
+
+.rightDiv_postBrief{
+    margin-left: 70px;
+}       

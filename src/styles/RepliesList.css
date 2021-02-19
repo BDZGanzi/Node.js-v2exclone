@@ -1,0 +1,37 @@
+.container_repliesList {
+    width: 700px;
+    height: auto;
+    margin: 1px 100px;
+    box-sizing: border-box;
+}
+
+.container_reply {
+    position: relative;
+    width: 700px;
+    height: auto;
+    /* background-color: #f6f6f6; */
+    box-sizing: border-box;
+}
+
+.reply_item {
+    margin: 1px auto;
+    border-radius: 3px;
+}
+
+.reply_leftDiv {
+    position: absolute;
+    top: 5px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.reply_rightDiv {
+    margin: 0px 40px 0px 75px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.reply_username {
+    color: #4e4e4e;
+    /* padding-top: 5px; */
+}

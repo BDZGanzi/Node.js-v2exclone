@@ -1,0 +1,10 @@
+.container_postList {
+    width: 700px;
+    height: auto;
+    margin: 1px 100px;
+    box-sizing: border-box;
+}
+
+.item {
+    margin: 0.5px auto;
+}

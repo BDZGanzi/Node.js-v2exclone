@@ -1,24 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import Header from './components/Header'
+import Main from './components/Main';
+import PostPage from './components/PostPage'
+import { useDispatch } from 'react-redux';
+import { getHot } from './reducers/postListReducer';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 
 function App() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getHot())
+  }, [dispatch])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ backgroundColor: '#f6f6f6', boxSizing:'border-box' }}>
+      <BrowserRouter>
+          <Header />
+
+        <Switch>
+          <Route path='/node/:name'>
+            <Main />
+          </Route>
+          <Route path='/user'>
+
+          </Route>
+          <Route path='/post/:postid'>
+            <PostPage />
+          </Route>
+          <Route path='/'>
+            <Main />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
